@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Ecommerce/static/css/main.0f02dae3.css",
+    "main.js": "/Ecommerce/static/js/main.549ffeef.js",
+    "static/media/foto123.jpg": "/Ecommerce/static/media/foto123.f5167875d91fd4f03d75.jpg",
+    "static/media/mashkulli.jpg": "/Ecommerce/static/media/mashkulli.783e034e49375ae1043f.jpg",
+    "static/media/foto321.jpg": "/Ecommerce/static/media/foto321.e7bcf765aed2e1181de0.jpg",
+    "static/media/foto22.jpg": "/Ecommerce/static/media/foto22.d114755477226376070d.jpg",
+    "static/media/femna.jpg": "/Ecommerce/static/media/femna.8e61de7ab7ad8b39d49f.jpg",
+    "static/media/mashkulli2.jpg": "/Ecommerce/static/media/mashkulli2.dc9f65f5a45f21bc90bb.jpg",
+    "static/media/slick.svg": "/Ecommerce/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Ecommerce/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Ecommerce/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Ecommerce/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Ecommerce/index.html",
+    "main.0f02dae3.css.map": "/Ecommerce/static/css/main.0f02dae3.css.map",
+    "main.549ffeef.js.map": "/Ecommerce/static/js/main.549ffeef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f02dae3.css",
+    "static/js/main.549ffeef.js"
+  ]
+}
