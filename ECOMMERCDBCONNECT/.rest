@@ -1,0 +1,54 @@
+###Shfaqi te gjithe userat e databazes
+GET http://localhost:3200/users
+Accept: application/json
+
+###Gjeje userin ne baze te ID
+GET http://localhost:3200/users/6715bf335b4d4fc5c6ce1261
+Accept: application/json
+
+###Shto nje user te ri
+POST http://localhost:3200/users
+Content-Type: application/json
+
+{
+    "name":"Armend",
+    "email":"armendi@gmail.com"
+}
+
+###Update nje user ne baze te ID
+PATCH http://localhost:3200/users/6715bf335b4d4fc5c6ce1261
+Content-Type: application/json
+
+{
+    "name":"Yllka Hashani"
+}
+
+###Fshi nje user ne baze te ID
+DELETE http://localhost:3200/users/6737b65609346b7fbcd99134
+
+###
+
+POST http://localhost:3200/api/cart
+Content-Type: application/json
+
+{
+  "productId": "12345",
+  "name": "Sample Product",
+  "img": "sample.jpg",
+  "description": "This is a sample product."
+}
+
+###
+
+GET http://localhost:3200/api/cards
+Accept: application/json
+
+###
+
+POST http://localhost:3200/api/cards
+Content-Type: application/json
+{
+  "img": "https://via.placeholder.com/150",
+  "name": "New Product",
+  "description": "This is a new product."
+}
