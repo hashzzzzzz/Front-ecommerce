@@ -1,0 +1,272 @@
+/* Slick Navigation Arrows */
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Align the arrows symmetrically */
+.slick-prev {
+    left: -45px; /* Adjust the value to ensure equal spacing */
+}
+
+.slick-next {
+    right: -38px; /* Match the left arrow spacing */
+}
+
+/* Product Banner Styling */
+.product-banner {
+    padding: 20px 200px 20px;
+    background: linear-gradient(45deg, #ff6f61, #6a1b9a, #00bcd4, #ffeb3b);
+    background-size: 270% 100%;
+    animation: gradientAnimation 10s ease infinite;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(185, 105, 105, 0.1);
+    max-width: 100%;
+    margin: auto;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Slick Carousel Styling */
+.slick-carousel {
+    margin: 0 auto;
+    display: block;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-center .product-card {
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.slick-slide:not(.slick-center) .product-card {
+    transform: scale(1);
+}
+
+/* Product Banner Cards */
+.product-banner .product-card {
+    width: 250px;
+    height: 420px;
+    margin: 20px 25px 0;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Disable hover effect for banner cards */
+.product-banner .product-card:hover {
+    transform: none;
+}
+
+/* Product Image Styling */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-body {
+    padding: 4px;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.4em;
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+.product-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-description {
+    color: #666;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.add-to-cart-button,
+.edit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-button:hover,
+.edit-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.edit-button {
+    background-color: #28a745;
+}
+
+.edit-button:hover {
+    background-color: #218838;
+}
+
+/* All Products Section */
+.all-products {
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    margin-top: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: white;
+}
+
+/* Product Grid Section */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* General Product Grid Cards */
+.product-grid .product-card {
+    max-width: 100%;
+}
+
+/* Adjust Card Alignment */
+.product-grid .product-card:nth-child(1) {
+    justify-self: start;
+}
+
+.product-grid .product-card:nth-child(2) {
+    justify-self: center;
+}
+
+.product-grid .product-card:nth-child(3) {
+    justify-self: end;
+}
+
+/* Responsive Styling */
+
+/* For small screens (max-width: 542px) */
+@media (max-width: 400px) {
+    .product-banner {
+        display: block;
+        width: 90%;
+        max-width: 1000px;
+        padding: 30px 10px;
+        text-align: center;
+        margin: 0px 80px;
+    }
+
+    .product-banner .banner-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-card {
+        display: inline-block;
+        margin: 0 auto;
+        max-width: 250px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media(min-width: 401px)  and (max-width: 549px){
+
+    .product-banner {
+        display: block;
+        width: 90%;
+        max-width: 1000px;
+        padding: 30px 10px;
+        text-align: center;
+        margin: 0px 60px;
+    }
+
+    .product-banner .banner-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-card {
+        display: inline-block;
+        margin: 0 auto;
+        max-width: 250px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* For medium screens (552px to 768px) */
+@media (min-width: 550px) and (max-width: 822px) {
+    .navbar{
+    width: auto;
+    }
+    .product-banner  {
+        display: block;
+        width: 80%;
+        max-width: 1000px;
+        padding: 30px 10px;
+        text-align: center;
+        margin: 0px 65px;
+    }
+
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    }
+}
+
+
+
+/* For large screens (901px to 1280px) */
+@media (min-width: 850px) and (max-width: 1280px) {
+    .navbar{
+        width: 90%;
+    }
+    .product-banner {
+        display: block;
+        width: 90%;
+        max-width: 1000px;
+        padding: 30px 10px;
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}

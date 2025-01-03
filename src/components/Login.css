@@ -1,0 +1,141 @@
+/* Login.css */
+.login-signup-container {
+  display: flex;
+  flex-direction: column;  /* Ensures the form stays in one column */
+  align-items: center;
+  min-height: 100vh; /* Ensure it fills the entire viewport */
+  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+  padding: 50px 20px; /* Adds space from the edges of the viewport */
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #c6c6c6;
+  cursor: not-allowed;
+}
+
+button + button {
+  margin-top: 15px;
+  background-color: #28a745;
+  color: white;
+}
+
+button + button:hover {
+  background-color: #218838;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-signup-container {
+    padding: 30px 10px; /* Adjust padding for smaller screens */
+  }
+
+  form {
+    padding: 20px; /* Reduce padding for the form on smaller screens */
+    max-width: 300px; /* Adjust max-width for smaller screens */
+  }
+
+  h2 {
+    font-size: 20px; /* Reduce font size for headings */
+  }
+
+  input {
+    padding: 8px; /* Adjust input padding */
+    font-size: 14px; /* Reduce font size for inputs */
+  }
+
+  button {
+    padding: 10px; /* Adjust button padding */
+    font-size: 14px; /* Reduce font size for buttons */
+  }
+
+  footer {
+    font-size: 12px; /* Reduce footer text size */
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 26px; /* Further reduce padding for very small screens */
+  }
+
+  h2 {
+    font-size: 18px; /* Further reduce heading size */
+  }
+
+  input {
+    padding: 5px; /* Adjust input padding for very small screens */
+  }
+
+  button {
+    padding: 8px; /* Adjust button padding for very small screens */
+    font-size: 12px; /* Adjust button font size */
+  }
+}

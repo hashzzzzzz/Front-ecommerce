@@ -1,0 +1,198 @@
+/* cart.css */
+
+/* Container for the entire cart */
+.cart-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Heading for the cart */
+.cart-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style for the cart items */
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between; /* Space between image, content, and delete button */
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 1em;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+}
+
+/* Cart item image */
+.cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Text section for cart item */
+.cart-item .item-info {
+    flex-grow: 1;
+    padding-right: 20px; /* Add some space on the right side */
+    margin-bottom: 30px; /* Space between info and button */
+}
+
+/* Title for cart item */
+.cart-item .item-info h3 {
+    font-size: 18px;
+    margin-bottom: 2em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Price for cart item */
+.cart-item .item-info p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: #777;
+}
+
+/* If cart is empty, this will be shown */
+.empty-cart-message {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+}
+
+/* Checkout button (blue button at the bottom) */
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0099ff; /* Keep the blue color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 2em;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    height: 50px; /* Ensure consistent height */
+}
+
+.checkout-button:hover {
+    background-color: #0077cc; /* Darker blue on hover */
+}
+
+.checkout-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Cart item hover effect */
+.cart-item:hover {
+    transform: scale(1.03); /* Slight zoom-in effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for hover */
+}
+
+/* Updated delete button style */
+.delete-button {
+    background: none;
+    border: none;
+    color: #ff0000; /* Red color for the trash icon */
+    font-size: 18px; /* Set a consistent font size */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    align-self: flex-start; /* Align the delete button at the top-right */
+    margin-left: 20px; /* Space between content and delete button */
+    margin-top: 10px; /* Reduced margin-top to create space between button and content */
+    padding: 5px; /* Add some padding to make the button size consistent */
+    width: 30px; /* Fixed width to make button the same size */
+    height: 30px; /* Fixed height to match the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none; /* Remove outline when focused */
+}
+
+/* Adjusted hover effect */
+.delete-button:hover {
+    color: #ff4747; /* Slightly darker red on hover */
+    animation: shake 0.3s ease forwards; /* Apply shake animation */
+    outline: none; /* Ensure no outline on hover */
+}
+
+/* Remove focus outline when clicked */
+.delete-button:focus {
+    outline: none;
+}
+
+/* Shake animation */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 10px;
+    }
+
+    /* Cart items stack vertically on smaller screens */
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .cart-item img {
+        width: 80px; /* Adjust image size */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .cart-item .item-info {
+        padding-right: 0; /* Remove padding to allow items to stack */
+    }
+
+    .checkout-button {
+        height: 45px; /* Adjust button height */
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-container {
+        padding: 5px;
+    }
+
+    .cart-item img {
+        width: 70px; /* Even smaller image on mobile */
+    }
+}

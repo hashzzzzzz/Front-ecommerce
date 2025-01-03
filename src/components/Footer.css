@@ -1,0 +1,113 @@
+/* Footer container */
+.footer {
+  background-color: #07121e; /* Dark purple */
+  color: #f3e5f5; /* Light purple text */
+  text-align: center;
+  padding: 20px 50px; /* Adjust padding to match navbar style */
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
+  position: relative;
+}
+
+/* Footer paragraph styling */
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Footer links styling */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #e1bee7; /* Soft purple */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d1c4e9; /* Hover light purple */
+}
+
+/* Social icon styling */
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px; /* Space out social icons */
+}
+
+.social-icons a {
+  color: #f3e5f5; /* Icon color */
+  font-size: 1.5rem; /* Larger icon size */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ba68c8; /* Purple hover */
+}
+
+/* Responsive footer */
+@media (max-width: 538px) {
+  /* Ensure the footer takes full width */
+  .footer {
+    width: 530px;
+    padding: 20px; /* Adjust padding on smaller screens */
+    left:0px;
+  }
+
+  /* Stack the footer links and social icons vertically on smaller screens */
+  .footer-links {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center align links */
+    gap: 10px; /* Reduce the gap */
+    width: 100%;
+  }
+
+  .social-icons {
+    flex-direction: column; /* Stack social icons vertically */
+    gap: 10px; /* Reduce the gap */
+  }
+
+  .social-icons a {
+    font-size: 1.2rem; /* Smaller icons for mobile */
+  }
+}
+
+@media (min-width: 538px)and (max-width:700px) {
+  /* Ensure the footer takes full width */
+  .footer {
+    width: 630px;
+    padding: 20px; /* Adjust padding on smaller screens */
+    left:0px;
+  }
+
+  /* Stack the footer links and social icons vertically on smaller screens */
+  .footer-links {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center align links */
+    gap: 10px; /* Reduce the gap */
+    width: 100%;
+  }
+
+  .social-icons {
+    flex-direction: column; /* Stack social icons vertically */
+    gap: 10px; /* Reduce the gap */
+  }
+
+  .social-icons a {
+    font-size: 1.2rem; /* Smaller icons for mobile */
+  }
+}

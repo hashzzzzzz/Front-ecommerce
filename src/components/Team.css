@@ -1,0 +1,139 @@
+/* Team Section (Unchanged) */
+.team-members {
+    margin-top: 0px; /* Ensures no margin top */
+}
+
+.team-members h3 {
+    margin-top: 0px;
+    font-size: 2.5rem;
+    color: #07121e;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.team-members h2 {
+    font-size:2em;
+}
+
+.team {
+    padding: 0px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small devices */
+@media (max-width: 768px) {
+    .team-members h2 {
+        font-size: 2rem;
+        margin-top: 0px; /* Remove any margin at the top */
+        padding-top: 0px; /* Remove any padding at the top */
+        margin-bottom: 5px; /* Reduce the space below the heading to move it closer */
+    }
+
+    .team-cards {
+        margin-left: 120px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .team-members h2 {
+        text-align: right; /* Align the title to the right */
+        margin-left: 40px; /* Add some margin to the right for spacing */
+        margin-top: 0px; /* Ensure no margin at the top */
+        padding-top: 0px; /* Remove any padding at the top */
+        margin-bottom: -10px; /* Reduce the space below the heading to move it closer */
+    }
+
+    .team-members h3 {
+        font-size: 1.8rem;
+    }
+
+    .team-cards {
+        display: flex; /* Ensure flexbox is applied */
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards horizontally */
+        justify-content: center; /* Center the cards vertically if needed */
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 220px;
+        margin: 10px 0;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 1024px) {
+    .team-cards {
+        gap: 40px;
+    }
+
+    .card {
+        width: 280px;
+    }
+}

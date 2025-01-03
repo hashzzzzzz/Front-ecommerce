@@ -1,0 +1,137 @@
+/* Parent Container for Cards */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Reduced gap for better spacing */
+  padding: 20px;
+  box-sizing: border-box;
+  justify-items: center; /* Center items horizontally */
+}
+
+/* Product Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 350px; /* Enforce consistent height */
+  max-width: 100%; /* Ensure cards do not stretch too far */
+  width: 100%; /* Ensure the card fills its container */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover Effect */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product-image {
+  width: 100%; /* Ensure the image spans the full width */
+  height: 200px; /* Adjust height as per your preference */
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
+  display: block;
+}
+
+/* Product Body */
+.product-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between description and button */
+  padding: 15px;
+  flex-grow: 1; /* Ensures the card body takes up the remaining height */
+  box-sizing: border-box;
+}
+
+/* Price */
+.price {
+  color: rgb(0, 137, 75);
+  font-size: 1.1rem; /* Slightly larger font size for emphasis */
+  font-weight: bold;
+  margin-bottom: 10px; /* Add spacing between price and other content */
+}
+
+/* Product Title */
+.product-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block; /* Ensure text truncation works properly */
+}
+
+/* Product Description */
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  flex-grow: 1; /* Allows description to take available space */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px; /* Adds space between description and the button */
+  display: block;
+}
+
+/* Add to Cart Button */
+.add-to-cart-button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Ensures the button is at the bottom of the card */
+}
+
+.add-to-cart-button:hover {
+  background: #0056b3;
+}
+
+/* Media Query for screens under 400px */
+@media (max-width: 400px) {
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 45px;
+    box-sizing: border-box;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 0 auto;
+  }
+
+  .product-card {
+    width: 90%; /* Set card width to 90% of the container */
+    max-width: 350px; /* Cap the maximum width to 350px */
+    display: flex; /* Ensure flexbox is maintained */
+    flex-direction: column; /* Ensure card content is stacked vertically */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 0 auto;
+  }
+
+  .product-image {
+    height: 250px; /* Increase the image height for better visibility */
+  }
+
+  .price, .product-title, .product-description {
+    font-size: 1.1rem; /* Slightly larger text for better readability */
+  }
+
+  .add-to-cart-button {
+    padding: 12px 18px; /* Larger button for touch targets */
+  }
+}
